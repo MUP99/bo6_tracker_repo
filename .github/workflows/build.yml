@@ -22,7 +22,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pyinstaller pywin32 scikit-learn pyqt5 numpy opencv-python pyautogui pynput
+        pip install pyinstaller pywin32 scikit-learn pyqt5 numpy opencv-python pyautogui pynput pyscreeze
 
     - name: Build executable
       run: |
