@@ -26,10 +26,10 @@ jobs:
 
     - name: Build executable
       run: |
-        pyinstaller --onefile --windowed --icon=icon.ico --add-data "icon.png;." --name BO6_Color_Tracker bo6_tracker.py
+        pyinstaller --onefile --noconsole --icon=icon.ico --add-data "icon.png;." --name BO6_Color_Tracker bo6_tracker.py
 
     - name: Upload artifact
-      uses: actions/upload-artifact@v4
+      uses: actions/upload-artifact@4
       with:
         name: BO6_Color_Tracker
         path: dist/BO6_Color_Tracker.exe
