@@ -22,11 +22,11 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pyinstaller pywin32 scikit-learn pyqt5 numpy opencv-python pyautogui pynput pyscreeze
+        pip install pyinstaller pywin32 scikit-learn pyqt5 numpy opencv-python pyautogui pyscreeze pynput
 
     - name: Build executable
       run: |
-        pyinstaller --onefile --windowed --name BO6_Color_Tracker bo6_tracker.py
+        pyinstaller --onefile --windowed --add-data "icon.png;." --name BO6_Color_Tracker bo6_tracker.py
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
